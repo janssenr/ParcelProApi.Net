@@ -2,7 +2,7 @@
 {
     public enum Carrier
     {
-        PostNl,
-        Dhl
+        PostNL,
+        DHL
     }
 }

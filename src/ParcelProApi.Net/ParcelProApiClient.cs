@@ -83,7 +83,7 @@ namespace ParcelProApi.Net
             throw new Exception(error.Message);
         }
 
-        public async Task<PickupLocation[]> GetPickupLocations(string zipCode, string number, string street = "", Carrier? carrier = Carrier.PostNl)
+        public async Task<PickupLocation[]> GetPickupLocations(string zipCode, string number, string street = "", Carrier? carrier = Carrier.PostNL)
         {
             var currentTime = GetCurrentTime();
             var hash = CreateHash(_loginId + currentTime + zipCode + number + street, _apiKey);
@@ -100,7 +100,7 @@ namespace ParcelProApi.Net
             if (!string.IsNullOrEmpty(street))
                 parameters["Straat"] = street;
             if (carrier != null)
-                parameters["Carrier"] = carrier.ToString().ToUpper();
+                parameters["Carrier"] = carrier.ToString();
             urlBuilder.Append(GetQueryString(parameters));
             var response = await _httpClient.GetAsync(urlBuilder.ToString()).ConfigureAwait(false);
             var jsonResult = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
