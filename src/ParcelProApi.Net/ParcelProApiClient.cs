@@ -100,7 +100,7 @@ namespace ParcelProApi.Net
             if (!string.IsNullOrEmpty(street))
                 parameters["Straat"] = street;
             if (carrier != null)
-                parameters["Carrier"] = carrier.ToString().ToUpper();
+                parameters["Carrier"] = carrier.ToString();
             urlBuilder.Append(GetQueryString(parameters));
             var response = await _httpClient.GetAsync(urlBuilder.ToString()).ConfigureAwait(false);
             var jsonResult = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
