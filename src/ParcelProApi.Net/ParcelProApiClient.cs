@@ -180,7 +180,7 @@ namespace ParcelProApi.Net
 
         private string GetCurrentTime()
         {
-            return DateTime.Now.ToString("yyyy-MM-ddHH:mm:ss");
+            return DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         }
 
         private string GetQueryString(Dictionary<string, string> parameters)

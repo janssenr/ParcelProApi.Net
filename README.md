@@ -33,7 +33,7 @@ var results = await client.GetShipmentTypes();
 ## Uitreiklocaties
 Om de uitreiklocaties van Pakje Gemak op te vragen tbv gebruik in de zending aanmaken api kan deze api worden aangeroepen. De api geeft de 20 dichtsbijzijnde uitreiklocaties in de omtrek van de opgegeven adresgegevens van de geadresseerde
 ```
-var results = await client.GetPickupLocations("3191EE", "22", "Griede", Carrier.PostNl);
+var results = await client.GetPickupLocations("3191EE", "22", "Griede", Carrier.PostNL);
 ```
 
 ## Nieuwe zending
