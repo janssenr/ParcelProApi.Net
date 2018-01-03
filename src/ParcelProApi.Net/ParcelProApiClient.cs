@@ -83,7 +83,7 @@ namespace ParcelProApi.Net
             throw new Exception(error.Message);
         }
 
-        public async Task<PickupLocation[]> GetPickupLocations(string zipCode, string number, string street = "", Carrier? carrier = Carrier.PostNl)
+        public async Task<PickupLocation[]> GetPickupLocations(string zipCode, string number, string street = "", Carrier? carrier = Carrier.PostNL)
         {
             var currentTime = GetCurrentTime();
             var hash = CreateHash(_loginId + currentTime + zipCode + number + street, _apiKey);
